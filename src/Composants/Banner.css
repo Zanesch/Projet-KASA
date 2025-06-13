@@ -1,0 +1,20 @@
+.Banner {
+  background-image: url("/Navbarimage.png");
+  background-size: cover;      
+  background-position: center; 
+  background-repeat: no-repeat;
+  color: white;                
+  padding: 2rem;
+  font-size: 2rem;
+   text-shadow:
+    2px 2px 4px rgba(0, 0, 0, 0.7),
+    -2px -2px 4px rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+     margin-bottom: 30px;
+}
+
+.Banner-content {
+  text-align: center;
+}
+
