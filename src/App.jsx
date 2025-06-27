@@ -4,11 +4,11 @@ import Banner from './Composants/Banner.jsx';
 import "./App.css";
 import Apartmentgrid from './Composants/Apartmentgrid.jsx'
 import Main from './Composants/Main.jsx'
+import Footer from './Composants/Footer.jsx';
 
 function App() {
   return (
     <div>
-      <Navbar/>
       <Main>
       <Banner/>
       <Apartmentgrid/>

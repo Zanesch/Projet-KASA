@@ -1,0 +1,17 @@
+.Footer {
+   background-color: #000;
+    display: grid;
+    height: 209px;
+    margin-top: auto;
+    padding: 30px 0;
+    place-items: center;
+    width: 100%;
+}
+.Fotter-logo{
+    color: white;
+}
+.Footer-text {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}

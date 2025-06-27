@@ -1,5 +1,6 @@
 .Main {
-    border: 3px solid green;
-    padding-inline: 3rem;
-    border-radius: 2rem;
+    margin: auto;
+    max-width: 1240px;
+    width: 90%;
+    margin-bottom: 30px;
 }
