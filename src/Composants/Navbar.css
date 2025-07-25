@@ -30,3 +30,25 @@
     flex-direction: row;
     column-gap: 60px;
 }
+/* Max width 1200 px */
+@media (max-width: 1200px) {
+  .Navbar-logo img {
+ width: 100px;
+  }
+  .Navbar-link{
+    font-size: 20px;
+    margin-right: 20px;
+  }
+}
+/* Max width 600 px */
+@media (max-width: 600px) {
+  .header-link{
+    column-gap: 5px;
+  }
+  .Navbar-logo img {
+ width: 150px;
+  }
+  .Navbar-link{
+    font-size: 25px;
+  }
+}

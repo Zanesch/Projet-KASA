@@ -1,11 +1,10 @@
 .Main-About{
     margin: auto;
     max-width: 1240px;
-    min-height: 100vh;
     width: 90%;
 }
 .Image-About{
-        margin: 0 auto 100px;
+        margin: 0 auto 0px;
 }
 .Image-About img {
     height: 223px;
@@ -22,25 +21,36 @@
     padding-bottom: 50px;
     margin: 50px 0 0;
 }
-.About-card{
-    width: 85%;
 
-}
-.dropdown {
+.About-card.dropdown {
     align-items: center;
-    background-color: #ff6060;
     border-radius: 10px;
     color: #fff;
-    display: flex;
     height: 52px;
-    justify-content: space-between;
-    padding: 0 20px;
     position: relative;
     z-index: 1;
 }
-.dropdown-arrow img {
-    color: #fff;
-    cursor: pointer;
-    height: 15.5px;
-    width: 26.4px;
+.dropdown-arrow i {
+  font-size: 26.4px; 
+  height: 15.5px;  
+  cursor: pointer;
+  color: white; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+h6 {
+    font-size: 16px;
+}
+.dropdown-content{
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    padding: 10px 20px  20px;
+    margin-top: -10px;
+    color: black;
+}
+

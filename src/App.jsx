@@ -5,6 +5,8 @@ import "./App.css";
 import Apartmentgrid from './Composants/Apartmentgrid.jsx'
 import Main from './Composants/Main.jsx'
 import Footer from './Composants/Footer.jsx';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function App() {
   return (
