@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import Dropdown from './Dropdown';
+import Dropdown from '../Dropdown';
 import './Apartmentpage.css';
 
 function Apartmentpage() {

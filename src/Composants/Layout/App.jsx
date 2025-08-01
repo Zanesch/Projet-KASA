@@ -1,10 +1,10 @@
 import React from 'react'
-import Navbar from './Composants/Navbar.jsx'  
-import Banner from './Composants/Banner.jsx';
+import Navbar from './Navbar.jsx'  
+import Banner from './Banner.jsx';
 import "./App.css";
-import Apartmentgrid from './Composants/Apartmentgrid.jsx'
-import Main from './Composants/Main.jsx'
-import Footer from './Composants/Footer.jsx';
+import Apartmentgrid from '../Pages/Apartmentgrid.jsx'
+import Main from './Main.jsx'
+import Footer from './Footer.jsx';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
