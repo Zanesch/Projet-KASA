@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import Dropdown from './Dropdown'; // <-- Import correct
+import { useParams, useNavigate } from 'react-router-dom';
+import Dropdown from './Dropdown';
 import './Apartmentpage.css';
 
 function Apartmentpage() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [apartment, setApartment] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -22,12 +22,15 @@ function Apartmentpage() {
           setApartment(found);
           setCurrentIndex(0);
         } else {
-          setError('Appartement non trouvé');
+          navigate('/404', { replace: true }); // 🔁 Redirection si non trouvé
         }
       })
-      .catch((err) => setError(err.message))
+      .catch((err) => {
+        console.error(err);
+        navigate('/404', { replace: true }); // 🔁 Redirection si erreur fetch
+      })
       .finally(() => setLoading(false));
-  }, [id]);
+  }, [id, navigate]);
 
   const prevImage = () => {
     setCurrentIndex((prevIndex) =>
@@ -48,7 +51,6 @@ function Apartmentpage() {
   };
 
   if (loading) return <div>Chargement...</div>;
-  if (error) return <div>{error}</div>;
 
   return (
     <div className="apartment-container">
@@ -86,7 +88,7 @@ function Apartmentpage() {
 
       <div className="dropdown-grid">
         <Dropdown title="Description" content={apartment.description} className="Apartment-dropdown" />
-<Dropdown title="Équipements" content={apartment.equipments} className="Apartment-dropdown" />
+        <Dropdown title="Équipements" content={apartment.equipments} className="Apartment-dropdown" />
       </div>
     </div>
   );
