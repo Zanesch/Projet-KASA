@@ -1,4 +1,6 @@
+// src/components/Dropdown.jsx
 import React, { useState } from 'react';
+import './Dropdown.scss'; // SCSS importé
 
 function Dropdown({ title, content, className }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,19 +20,17 @@ function Dropdown({ title, content, className }) {
         </div>
       </div>
 
-      {isOpen && (
-        <div className="dropdown-content">
-          {Array.isArray(content) ? (
-            <ul>
-              {content.map((item, idx) => (
-                <li key={idx}>{item}</li>
-              ))}
-            </ul>
-          ) : (
-            <p>{content}</p>
-          )}
-        </div>
-      )}
+      <div className={`dropdown-content ${isOpen ? 'open' : ''}`}>
+        {Array.isArray(content) ? (
+          <ul>
+            {content.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>{content}</p>
+        )}
+      </div>
     </div>
   );
 }

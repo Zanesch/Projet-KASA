@@ -44,6 +44,7 @@ h6 {
     font-size: 16px;
 }
 .dropdown-content{
+    animation: slide-bottom .5s cubic-bezier(.25,.46,.45,.94) both;
     background-color: #f6f6f6;
     border-radius: 10px;
     font-size: 18px;

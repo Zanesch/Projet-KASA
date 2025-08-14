@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Dropdown from '../Dropdown';
-import './Apartmentpage.css';
+import './Apartmentpage.scss';
 
 function Apartmentpage() {
   const { id } = useParams();
@@ -22,12 +22,12 @@ function Apartmentpage() {
           setApartment(found);
           setCurrentIndex(0);
         } else {
-          navigate('/404', { replace: true }); // 🔁 Redirection si non trouvé
+          navigate('/404', { replace: true }); //  Redirection si non trouvé
         }
       })
       .catch((err) => {
         console.error(err);
-        navigate('/404', { replace: true }); // 🔁 Redirection si erreur fetch
+        navigate('/404', { replace: true }); //  Redirection si erreur fetch
       })
       .finally(() => setLoading(false));
   }, [id, navigate]);

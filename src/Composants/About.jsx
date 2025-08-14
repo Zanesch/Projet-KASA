@@ -1,6 +1,6 @@
 import React from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import './About.css';
+import './About.scss';
 import Dropdown from './Dropdown.jsx';
 
 function About() {
