@@ -1,0 +1,203 @@
+//Banner
+$text-color: white;
+
+$banner-height: 223px;
+$border-radius: 20px;
+$max-width: 1200px;
+
+$shadow-strong: 2px 2px 4px rgba(0, 0, 0, 0.7),
+                 -2px -2px 4px rgba(0, 0, 0, 0.7);
+$shadow-light: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+// Page Erreur
+$error-color: #FF6060;
+
+
+$error-title-size: 10rem;
+$error-subtitle-size: 36px;
+
+// Footer
+$footer-bg: #000;
+$footer-text-color: #fff;
+
+
+$footer-height: 209px;
+$footer-padding: 30px 0;
+$footer-font-size: 20px;
+$footer-font-weight: 500;
+
+// Navbar
+
+$navbar-padding: 50px;
+$navbar-width: 90%;
+$navbar-max-width: 1240px;
+$navbar-link-color: black;
+$navbar-link-font-size: 24px;
+$navbar-link-height: 34px;
+$navbar-link-gap: 60px;
+
+// Responsive
+$navbar-link-font-size-1200: 20px;
+$navbar-link-font-size-600: 25px;
+$navbar-link-gap-600: 5px;
+$navbar-logo-width-1200: 100px;
+$navbar-logo-width-600: 150px;
+
+$font-family-base: "Montserrat", sans-serif;
+
+//Main
+
+$main-width: 90%;
+$main-max-width: 1240px;
+$main-margin-bottom: 30px;
+
+//Pages
+
+// About
+
+// Largeurs et marges
+$main-width: 90%;
+$main-max-width: 1240px;
+$main-margin-bottom: 30px;
+
+// Tailles images
+$about-image-height: 223px;
+$about-image-radius: 25px;
+
+// Couleurs
+$color-white: #fff;
+$color-black: #000;
+$about-dropdown-bg: #f6f6f6;
+
+// Textes
+$font-size-h6: 16px;
+$font-size-dropdown: 18px;
+$line-height-dropdown: 25px;
+
+// Bordures
+$border-radius-small: 10px;
+
+// Couleurs
+$color-grey: grey;
+$color-light-bg: #f6f6f6;
+$color-white: #fff;
+
+// Tailles
+$grid-height: 250px;
+$gallery-padding: 40px 0;
+$appartement-width: 340px;
+$appartement-height: 340px;
+$appartement-gap: 40px;
+
+// Bordures
+$border-radius-small: 10px;
+$border-radius-large: 25px;
+
+// Texte
+$font-size-overlay: 1.2rem;
+$font-weight-overlay: bold;
+
+// Couleurs
+$color-white: #fff;
+$color-black: #000;
+$color-primary: #FF6060;
+$color-text-secondary: #555;
+$color-grey-bg: #f6f6f6;
+$color-grey: grey;
+
+// Tailles / espacements
+$max-width: 1240px;
+$footer-height: 209px;
+$footer-padding: 30px 0;
+$border-radius: 10px;
+$border-radius-small: 5px;
+$border-radius-pill: 15px;
+
+// Font
+$font-size-normal: 16px;
+$font-size-lg: 20px;
+$font-size-xl: 36px;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+
+// Ombres
+$shadow-light: 0 2px 5px rgba(0,0,0,0.1);
+$shadow-strong: 0 4px 15px rgba(0,0,0,0.3);
+
+// Apartment
+$apartment-image-height: 415px;
+
+@mixin flex-between($wrap: nowrap, $center: false) {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: $wrap;
+  @if $center {
+    align-items: center;
+  }
+}
+
+@mixin flex-column($align: flex-start, $gap: 0) {
+  display: flex;
+  flex-direction: column;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin flex-center($dir: row, $gap: 0) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+@mixin border-radius-circle {
+  border-radius: 50%;
+}
+
+@mixin box-shadow($shadow) {
+  box-shadow: $shadow;
+}
+
+@mixin text-shadow($shadow) {
+  text-shadow: $shadow;
+}
+
+@mixin absolute-center-x($bottom: null) {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  @if $bottom != null {
+    bottom: $bottom;
+  }
+}
+
+@mixin flex-wrap-gap($gap: 0) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+}
+// Couleurs
+$color-primary: #ff5a5f !default;
+$color-light: #f7f7f7 !default;
+
+// Espacements
+$spacing-sm: 0.5rem !default;
+$spacing-md: 1rem !default;
+
+// Hauteurs
+$dropdown-header-height: 52px !default;
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+// mixins.scss
+
+// Mixin pour centrer avec flexbox
+@mixin flex-center(
+  $direction: row,
+  $justify: center,
+  $align: center,
+  $gap: 0
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+// Mixin pour text-shadow
+@mixin text-shadow($shadow) {
+  text-shadow: $shadow;
+}
+
+// Mixin pour box-shadow
+@mixin box-shadow($shadow) {
+  box-shadow: $shadow;
+}
+
+// Mixin  media queries
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == '1200' {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  } @else if $breakpoint == '600' {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+}
+
+// Mixin  border-radius
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+// Mixin  slide-bottom
+@mixin animation-slide-bottom($duration: 0.5s) {
+  animation: slide-bottom $duration cubic-bezier(.25,.46,.45,.94) both;
+}
+
+@mixin flex-center($direction: row, $gap: 0, $wrap: nowrap, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+

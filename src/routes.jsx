@@ -1,17 +1,17 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './Composants/Layout/App.jsx'
+import App from './Composants/Layout/App/App.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
   Outlet,
 } from 'react-router-dom'
-import Navbar from './Composants/Layout/Navbar.jsx'
-import Footer from './Composants/Layout/Footer.jsx'
-import Errorpagenotfound from './Composants/Layout/Errorpagenotfound.jsx'
-import About from './Composants/About.jsx'
-import Apartmentpage from './Composants/Pages/Apartmentpage.jsx' // ✅ Le bon composant
+import Navbar from './Composants/Layout/Navbar/Navbar.jsx'
+import Footer from './Composants/Layout/Footer/Footer.jsx'
+import Errorpagenotfound from './Composants/Layout/Errorpage/Errorpagenotfound.jsx'
+import About from './Composants/Pages/About/About.jsx'
+import Apartmentpage from './Composants/Pages/Apartmentpage/Apartmentpage.jsx' // ✅ Le bon composant
 
 const HeaderlayoutFooter = () => {
   return (
@@ -37,8 +37,8 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: '/appartement/:id', // ✅ Route dynamique vers un appartement
-        element: <Apartmentpage />, // ✅ Utilisation du bon composant
+        path: '/appartement/:id', //  Route dynamique vers un appartement
+        element: <Apartmentpage />, //  Utilisation du bon composant
       },
     ],
   },

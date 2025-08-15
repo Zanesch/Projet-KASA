@@ -1,0 +1,25 @@
+@use './variables' as vars;
+
+// Reset / global styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: vars.$font-family-base;
+  background-color: vars.$body-bg; // optionnel, si tu définis une couleur globale
+  color: vars.$body-color;         // optionnel
+}
+
+// Tu peux aussi ajouter des styles globaux pour h1, h2, a, etc.
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+}

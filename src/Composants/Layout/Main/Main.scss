@@ -1,0 +1,8 @@
+@use '../../styles/variables' as vars;
+
+.Main {
+  margin: auto;
+  max-width: vars.$main-max-width;
+  width: vars.$main-width;
+  margin-bottom: vars.$main-margin-bottom;
+}

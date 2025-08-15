@@ -1,0 +1,21 @@
+@use '../../styles/Variables' as vars;
+@use '../../styles/mixins' as mix;
+
+.Error-page {
+  color: vars.$error-color;
+  text-align: center;
+  padding-bottom: 75px;
+
+  h3 {
+    font-size: vars.$error-title-size;
+  }
+
+  h4 {
+    font-size: vars.$error-subtitle-size;
+  }
+}
+
+.error-page-wrapper {
+  @include mix.flex-center(column, center, center); // correction ici
+  min-height: 100vh;
+}

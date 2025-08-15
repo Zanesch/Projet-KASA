@@ -1,7 +1,7 @@
 import React from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './About.scss';
-import Dropdown from './Dropdown.jsx';
+import Dropdown from '../Dropdown/Dropdown.jsx';
 
 function About() {
   const cards = [

@@ -1,0 +1,66 @@
+@use '../../styles/variables' as vars;
+@use '../../styles/mixins' as mixins;
+
+.Navbar {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding: vars.$navbar-padding;
+  width: vars.$navbar-width;
+  max-width: vars.$navbar-max-width;
+
+  &-logo {
+    margin-right: auto;
+
+    img {
+      // par défaut, taille normale
+    }
+  }
+
+  &-link {
+    color: vars.$navbar-link-color;
+    text-decoration: none;
+    position: relative;
+    font-size: vars.$navbar-link-font-size;
+    height: vars.$navbar-link-height;
+  }
+
+  a {
+    text-decoration: none;
+
+    &.active {
+      text-decoration: underline;
+    }
+  }
+
+  .header-link {
+    display: flex;
+    flex-direction: row;
+    column-gap: vars.$navbar-link-gap;
+  }
+
+  @include mixins.respond-to('1200') {
+    &-logo img {
+      width: vars.$navbar-logo-width-1200;
+    }
+
+    &-link {
+      font-size: vars.$navbar-link-font-size-1200;
+      margin-right: 20px;
+    }
+  }
+
+  @include mixins.respond-to('600') {
+    .header-link {
+      column-gap: vars.$navbar-link-gap-600;
+    }
+
+    &-logo img {
+      width: vars.$navbar-logo-width-600;
+    }
+
+    &-link {
+      font-size: vars.$navbar-link-font-size-600;
+    }
+  }
+}

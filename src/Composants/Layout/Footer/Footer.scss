@@ -1,0 +1,22 @@
+@use '../../styles/variables' as vars;
+@use '../../styles/mixins' as mixins;
+
+.Footer {
+  background-color: vars.$footer-bg;
+  display: grid;
+  height: vars.$footer-height;
+  margin-top: auto;
+  padding: vars.$footer-padding;
+  place-items: center;
+  width: 100%;
+
+  &-logo {
+    color: vars.$footer-text-color;
+  }
+
+  &-text {
+    color: vars.$footer-text-color;
+    font-size: vars.$footer-font-size;
+    font-weight: vars.$footer-font-weight;
+  }
+}
