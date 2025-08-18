@@ -40,8 +40,8 @@ $navbar-link-gap: 60px;
 $navbar-link-font-size-1200: 20px;
 $navbar-link-font-size-600: 25px;
 $navbar-link-gap-600: 5px;
-$navbar-logo-width-1200: 100px;
-$navbar-logo-width-600: 150px;
+$navbar-logo-width-1200: 200px;
+$navbar-logo-width-888: 200px;
 
 $font-family-base: "Montserrat", sans-serif;
 
@@ -191,6 +191,34 @@ $spacing-md: 1rem !default;
 
 // Hauteurs
 $dropdown-header-height: 52px !default;
+// Apartment Grid
+.apartment-grid {
+  width: $main-width; // 90% par défaut
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($appartement-width, 1fr));
+  gap: $appartement-gap;
+  padding: $gallery-padding;
+  color: $color-text-secondary; // couleur gris du texte
+
+  @media (max-width: 600px) {
+    width: 100%; // Passe à 100% en mobile
+    color: $color-black; // On enlève le gris (remet au noir par exemple)
+    gap: 20px; // éventuellement réduire l'espacement
+  }
+}
+
+// Apartment Card
+.apartment-card {
+  width: $appartement-width;
+  height: $appartement-height;
+
+  @media (max-width: 600px) {
+    width: 100%; // prend toute la largeur de son parent
+    height: auto; // ajustement automatique si nécessaire
+  }
+}
+
 
 
 

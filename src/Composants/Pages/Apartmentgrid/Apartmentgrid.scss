@@ -1,23 +1,36 @@
 @use '../../styles/variables' as vars;
 @use '../../styles/mixins' as mix;
 
-.Grid {
-  background-color: vars.$color-grey;
-  height: vars.$grid-height;
-}
-
 .gallery-container {
   background-color: vars.$color-light-bg;
   @include mix.border-radius(vars.$border-radius-large);
   margin: auto;
   padding: vars.$gallery-padding;
   width: 100%;
+
+  @media (max-width: 888px) {
+    background-color: vars.$color-white; // supprime le gris sur mobile
+    .appartement-card {
+  width: 100%;
+}
+.gallery-container{
+  padding: 0;
+}
+.appartements-grid{
+  width: 100%;
+}
+  }
 }
 
 .appartements-grid {
-  @include mix.flex-center(row, vars.$appartement-gap, wrap);
+  @include mix.flex-wrap-gap(vars.$appartement-gap); // grille flexible avec wrap
   margin: auto;
   width: 90%;
+
+  @media (max-width: 600px) {
+    width: 100%; // full width sur mobile
+
+  }
 }
 
 .appartement-card {
@@ -32,10 +45,8 @@
   &:hover {
     transform: scale(1.03);
   }
-}
 
-.background-image {
-  background-position: center;
+  
 }
 
 .appartement-overlay {

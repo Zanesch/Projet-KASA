@@ -56,7 +56,7 @@
     }
 
     &-logo img {
-      width: vars.$navbar-logo-width-600;
+      width: vars.$navbar-logo-width-888;
     }
 
     &-link {
@@ -64,3 +64,9 @@
     }
   }
 }
+@include mixins.respond-to('888') {
+  &-logo img {
+    width: vars.$navbar-logo-width-888; // applique 200px à 888px
+  }
+}
+

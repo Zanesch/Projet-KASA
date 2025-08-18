@@ -20,3 +20,16 @@
     font-weight: vars.$footer-font-weight;
   }
 }
+ @media (max-width: 888px) {
+  .Footer {
+    align-content: center;
+    gap: 20px;
+  }
+   .Footer-logo img {
+    width: 200px; // taille du logo pour petits écrans
+    height: auto;
+  }
+  .Footer-text .line-break {
+    display: block; // force le retour à la ligne
+  }
+  }

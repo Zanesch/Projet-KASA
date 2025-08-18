@@ -8,9 +8,8 @@ function Footer() {
             <img src="/Logo-kasa-blanc.png" alt="logo" />
         </div>
         <div className='Footer-text'>
-            ⓒ 2020 Kasa. All rights reserved
-        </div>
-      
+  ⓒ 2020 Kasa. All <span className="line-break">rights reserved</span>
+</div>   
     </div>
   )
 }

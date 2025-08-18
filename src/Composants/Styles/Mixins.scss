@@ -5,12 +5,21 @@
   $direction: row,
   $justify: center,
   $align: center,
-  $gap: 0
+  $gap: 0,
+  $wrap: nowrap
 ) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
+  gap: $gap;
+  flex-wrap: $wrap;
+}
+
+// Mixin pour flex wrap avec gap
+@mixin flex-wrap-gap($gap: 0) {
+  display: flex;
+  flex-wrap: wrap;
   gap: $gap;
 }
 
@@ -24,39 +33,30 @@
   box-shadow: $shadow;
 }
 
-// Mixin  media queries
+// Mixin pour border-radius
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+// Mixin pour border-radius circulaire
+@mixin border-radius-circle {
+  border-radius: 50%;
+}
+
+// Mixin pour animations slide-bottom
+@mixin animation-slide-bottom($duration: 0.5s) {
+  animation: slide-bottom $duration cubic-bezier(.25,.46,.45,.94) both;
+}
+
+// Mixin pour media queries
 @mixin respond-to($breakpoint) {
   @if $breakpoint == '1200' {
     @media (max-width: 1200px) {
       @content;
     }
   } @else if $breakpoint == '600' {
-    @media (max-width: 600px) {
+    @media (max-width: 888px) {
       @content;
     }
   }
 }
-
-// Mixin  border-radius
-@mixin border-radius($radius) {
-  border-radius: $radius;
-}
-
-// Mixin  slide-bottom
-@mixin animation-slide-bottom($duration: 0.5s) {
-  animation: slide-bottom $duration cubic-bezier(.25,.46,.45,.94) both;
-}
-
-@mixin flex-center($direction: row, $gap: 0, $wrap: nowrap, $justify: center, $align: center) {
-  display: flex;
-  flex-direction: $direction;
-  flex-wrap: $wrap;
-  justify-content: $justify;
-  align-items: $align;
-  gap: $gap;
-}
-
-@mixin border-radius($radius) {
-  border-radius: $radius;
-}
-
