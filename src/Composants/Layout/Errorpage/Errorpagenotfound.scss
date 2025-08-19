@@ -19,3 +19,31 @@
   @include mix.flex-center(column, center, center); // correction ici
   min-height: 100vh;
 }
+@media screen and (max-width: 888px) {
+  .Error-page {
+    h3 {
+      font-size: 96px;
+      margin-top: 40px;
+    }
+
+    h4 {
+      font-size: 18px;
+      margin-top: 15px;
+      line-height: 1.4;
+      margin-bottom: 50px;
+    }
+
+    .h4-linebreak {
+      display: block;
+      margin-top: 5px;
+    }
+
+    a {
+      display: inline-block;    // plus facile à gérer pour les marges
+      margin: 40px 0;
+      color: vars.$error-color;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}

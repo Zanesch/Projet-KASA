@@ -12,7 +12,11 @@ function Errorpagenotfound() {
       <Main>
         <div className='Error-page'>
       <h3>404</h3>
-      <h4>Oops! La page que vous demandez n'existe pas.</h4>
+<h4>
+  Oups! La page que 
+  <span className="h4-linebreak">vous demandez n'existe pas.</span>
+</h4>
+
       <Link to="/">Retournez sur la page d'accueil</Link>
               </div>
               <Footer/>
